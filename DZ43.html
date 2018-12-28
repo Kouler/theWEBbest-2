@@ -1,0 +1,30 @@
+<html>
+<head>
+<meta charset="utf-8">
+<title> Площадь трапеции 4.3 </title>
+<script>
+function square(){
+	var a = document.getElementById('a').value;
+	var b = document.getElementById('b').value;
+	var h = document.getElementById('h').value; 
+	if ((a <= 0) || (b <= 0) || (h <= 0)){
+		console.log('Неверно введены данные!');
+		document.getElementById("res").innerHTML = ('Неверно введены данные!');
+	}else{
+		console.log('Площадь равна: ' + ((a + b) / 2 * h));
+		document.getElementById("res").innerHTML = ('Площадь равна: ' + ((a + b) / 2 * h));
+	}
+}
+</script>
+</head>
+<body>
+
+<h3> 1.6 Площадь трапеции </h3>
+<form name="data">
+	Основание:<input type ="number" id="a" size=10><br>
+	Основание:<input type ="number" id="b" size=10><br>
+	Высота:<input type ="number" id="h" size=10><br>
+	<output id="res"></output><br> 
+</form>
+<button onClick="square(data)">Площадь</button><br>
+</body> 
